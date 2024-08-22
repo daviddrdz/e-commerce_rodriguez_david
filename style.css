@@ -59,7 +59,7 @@ h2 {
   font-weight: 700;
 }
 
-.productosdest, .productosoff {
+.productosdest {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 45px;
@@ -140,25 +140,6 @@ h2 {
   margin: auto 0 auto 0;
   display: flex;
   align-items: center;
-}
-
-.productosoff .precio, .preciooff {
-  text-decoration: line-through;
-  font-size: 17px;
-  color: rgba(0, 0, 0, 0.6)
-} 
-
-.preciodescuento {
-  font-size: 20px;
-  margin-bottom: 17px;
-}
-
-.descuento {
-  background-color: red;
-  color: white;
-  margin: 10px;
-  padding: 3px;
-  font-weight: 600;
 }
 
 .carrito {
