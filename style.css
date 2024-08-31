@@ -1,11 +1,19 @@
 body {
   margin: 0;
-  background-color: #252323;
+  height: 100vh;
   font-family: "Poppins", sans-serif;
+  background-image: url(./images/background.jpg);
+  background-size: cover;
+  backdrop-filter: blur(5px);
 }
 
 nav {
-  background-color: rgb(26, 26, 26);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.divisor {
+  height: 3px;
+  background-color: white;
 }
 
 .navbar-brand {
