@@ -1,6 +1,7 @@
 body {
   margin: 0;
-  height: 100vh;
+  height: 100%;
+  width: 100%;
   font-family: "Poppins", sans-serif;
   background-image: url(./images/background.jpg);
   background-size: cover;
@@ -55,19 +56,20 @@ nav {
 }
 
 main {
-  padding: 0 70px 0 70px;
-  margin-bottom: 100px;
+  display: flex;
+  justify-content: center;
+  padding:70px;
 }
 
-h2 {
-  text-align: start;
+h1 {
+  text-align: center;
   color: white;
-  margin: 35px 0 50px 0;
-  font-size: 30px;
-  font-weight: 700;
+  margin: 60px 0;
+  font-size: 50px;
+  font-weight: 600;
 }
 
-.productosdest {
+.productosdest{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 45px;
@@ -75,16 +77,20 @@ h2 {
   margin-bottom: 70px;
 }
 
-.destacados {
-  margin: 70px 0 80px 0;
+.contenedor{
+  display: flex;
+  padding-bottom: 70px;
+  gap: 45px;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-self: center;
 }
 
 .carta {
   background-color: white;
   display: flex;
   flex-direction: column;
-  min-width: 310px;
-  max-width: 310px;
+  width: 310px;
   height: 400px;
   align-items: center;
   justify-content: center;
@@ -94,7 +100,7 @@ h2 {
   box-sizing: unset;
 
   img {
-      width: 200px;
+      width: 100%;
   }
 
   h3 {
