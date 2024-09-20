@@ -12,7 +12,7 @@ function fillCards() {
                             <span class="precio">$$$</span>
                         </div>
                     <div class="carrito">
-                        <button><i class='bx bx-info-circle'></i>Ver más</button>
+                        <button value="${i}" onclick="getProduct()"><a href=./producto.html><i class='bx bx-info-circle'></i>Ver más</a></button>
                     </div>
                 </div>`
             );

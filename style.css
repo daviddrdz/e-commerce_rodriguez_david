@@ -76,7 +76,7 @@ h1 {
   margin-bottom: 70px;
 }
 
-.contenedor{
+.contenedor, section{
   display: flex;
   padding-bottom: 70px;
   gap: 45px;
@@ -170,4 +170,16 @@ h1 {
   font-weight: 600;
   background-color: rgb(128, 166, 255);
   font-size: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+img {
+  height: 200px;
 }
