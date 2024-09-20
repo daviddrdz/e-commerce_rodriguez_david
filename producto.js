@@ -14,7 +14,7 @@ class Producto {
       <div class="contenido">
         <img src="https://66d9ee6caa07a954166f10ed--gregarious-melba-cacdba.netlify.app/${this.imagen}.jpg" height="200px">
         <div class="descripcion">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+          <p>${this.detalle}</p>
           <span>Stock: ${this.stock}</span>
         </div>
       </div>
@@ -24,6 +24,12 @@ class Producto {
   }
 }
 
-const producto1 = new Producto("Producto 1", "BMW Azul", 239382, 10, 1)
+const producto1 = new Producto(
+  "Producto 1", 
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua", 
+  239382, 
+  10, 
+  1
+)
 
 producto1.details();
