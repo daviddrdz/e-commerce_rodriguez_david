@@ -27,7 +27,7 @@ const data = [
     price: 812622.47,
     stock: 1,
     img: "http://dummyimage.com/155x100.png/5fa2dd/ffffff",
-    category: "Crime|Drama|Mystery",
+    category: "Drama",
   },
   {
     id: 4,
@@ -37,7 +37,7 @@ const data = [
     price: 599110.73,
     stock: 10,
     img: "http://dummyimage.com/199x100.png/ff4444/ffffff",
-    category: "Western",
+    category: "Comedy",
   },
   {
     id: 5,
@@ -57,7 +57,7 @@ const data = [
     price: 554688.41,
     stock: 2,
     img: "http://dummyimage.com/236x100.png/dddddd/000000",
-    category: "Musical|Romance",
+    category: "Comedy",
   },
   {
     id: 7,
@@ -67,7 +67,7 @@ const data = [
     price: 423798.49,
     stock: 1,
     img: "http://dummyimage.com/229x100.png/dddddd/000000",
-    category: "Mystery|Thriller",
+    category: "Mystery",
   },
   {
     id: 8,
@@ -77,7 +77,7 @@ const data = [
     price: 768494.15,
     stock: 4,
     img: "http://dummyimage.com/153x100.png/dddddd/000000",
-    category: "Comedy|Drama",
+    category: "Comedy",
   },
   {
     id: 9,
@@ -87,7 +87,7 @@ const data = [
     price: 526506.94,
     stock: 7,
     img: "http://dummyimage.com/210x100.png/ff4444/ffffff",
-    category: "Drama|Mystery|Thriller",
+    category: "Mystery",
   },
   {
     id: 10,
@@ -97,7 +97,7 @@ const data = [
     price: 705294.04,
     stock: 6,
     img: "http://dummyimage.com/102x100.png/cc0000/ffffff",
-    category: "Comedy|Drama",
+    category: "Comedy",
   },
 ];
 
