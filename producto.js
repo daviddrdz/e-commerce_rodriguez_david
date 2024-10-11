@@ -14,6 +14,7 @@ main.innerHTML = `
         <div class="descripcion">
           <p>${producto.detail}</p>
           <span>Stock: ${producto.stock}</span>
+          <span>Categoria: ${producto.category}</span>
         </div>
     </div>
   <h2>$${producto.price}</h2>
