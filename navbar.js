@@ -39,5 +39,5 @@ for (let i of categories) {
 };
 
 let navbarLeft = document.getElementById("menuLeft").innerHTML = menu[0]
-let navbarCenter = document.getElementById("menuCenter").innerHTML = menu.slice(1, 3).join("");
-let navbarRight = document.getElementById("menuRight").innerHTML = menu.slice(3, 5).join("");
+let navbarCenter = document.getElementById("menuCenter").innerHTML = menu.slice(1, 4).join("");
+let navbarRight = document.getElementById("menuRight").innerHTML = menu[4]
