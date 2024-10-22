@@ -72,14 +72,20 @@ h1 {
   margin-bottom: 70px;
 }
 
-.contenedor,
-section {
+.contenedor {
   display: flex;
   padding-bottom: 159px;
   gap: 45px;
   flex-wrap: wrap;
   justify-content: center;
   justify-self: center;
+}
+
+.contenedor p {
+  color: white;
+  padding: 192px 0;
+  font-size: 40px;
+  font-weight: 500;
 }
 
 .carta {

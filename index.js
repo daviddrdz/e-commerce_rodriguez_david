@@ -28,7 +28,12 @@ fillCards(data);
 
 const filterList = () => {
     let filtered = data.filter((item) => item.title === input.value);
-    fillCards(filtered);
+    if (filtered.length > 0) {
+        fillCards(filtered)
+    }
+    else {
+        section.innerHTML = `<p>No se ha encontrado el producto, intentalo de nuevo.</p>`
+    }
 }
 
 const filterCategory = (category) => {
@@ -41,7 +46,8 @@ buttonReset.addEventListener("click", () => fillCards(data));
 buttonAll.addEventListener("click", () => fillCards(data));
 for (let i in categoryButtons) {
     categoryButtons[i].addEventListener("click", (event) => {
-        const category = event.target.getAttribute("value");
+        const category = event.target.value;
         filterCategory(category);
+        titulo.innerText = category;
     })
 }
