@@ -1,5 +1,3 @@
-import data from './data.js';
-
 const main = document.querySelector("main");
 
 let id = window.location.search.split("=")[1];

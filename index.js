@@ -1,5 +1,3 @@
-import data from './data.js';
-
 const titulo = (document.querySelector("h1").innerText = "Productos");
 let section = document.querySelector(".contenedor");
 const input = document.querySelector("input");
@@ -48,6 +46,5 @@ for (let i in categoryButtons) {
     categoryButtons[i].addEventListener("click", (event) => {
         const category = event.target.value;
         filterCategory(category);
-        titulo.innerText = category;
     })
 }

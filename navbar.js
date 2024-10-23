@@ -1,33 +1,5 @@
 let menu = [];
 
-let categories = [
-  {
-    name: "Nosotros",
-    href: "#",
-    icon: "bx bx-buildings",
-  },
-  {
-    name: "Home",
-    href: "./index.html",
-    icon: "bx bx-home-alt-2",
-  },
-  {
-    name: "Productos",
-    href: "#",
-    icon: "bx bx-store-alt",
-  },
-  {
-    name: "Carrito",
-    href: "#",
-    icon: "bx bx-cart",
-  },
-  {
-    name: "Login",
-    href: "#",
-    icon: "bx bxs-user",
-  }
-];
-
 for (let i of categories) {
   menu.push(`
     <li class="nav-item">
@@ -40,4 +12,8 @@ for (let i of categories) {
 
 let navbarLeft = document.getElementById("menuLeft").innerHTML = menu[0]
 let navbarCenter = document.getElementById("menuCenter").innerHTML = menu.slice(1, 4).join("");
-let navbarRight = document.getElementById("menuRight").innerHTML = menu[4]
+if (localStorage.email && localStorage.password) {
+  let navbarRight = document.getElementById("menuRight").innerHTML = menu[5];
+} else {
+  let navbarRight = document.getElementById("menuRight").innerHTML = menu[4];
+}
