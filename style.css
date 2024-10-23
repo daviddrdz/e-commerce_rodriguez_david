@@ -31,9 +31,13 @@ body {
 
 .nav-link {
   color: white;
-  &:hover {
-    color: rgb(128, 166, 255);
+  &:visited {
+    color: white;
   }
+}
+
+.nav-link:hover {
+  color: rgb(128, 166, 255);
 }
 
 #active {
@@ -237,4 +241,86 @@ input {
   border-radius: 20px;
   height: 40px;
   text-indent: 10px;
+}
+
+.email input,
+.password input {
+  background: none;
+  color: white;
+}
+
+.email input::placeholder,
+.password input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.email,
+.password {
+  transition: all 1s;
+}
+
+.email:hover,
+.email:active,
+.password:hover,
+.password:active,
+.login button:hover {
+  transform: scale(1.08);
+}
+
+.login {
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login h1 {
+  margin: 0 0 20px 0;
+}
+
+.login form {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  color: white;
+  font-size: 20px;
+  align-items: center;
+}
+
+.login button {
+  max-width: 200px;
+  border: none;
+  outline: none;
+  padding: 20px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255);
+  color: black;
+  margin-top: 20px;
+  transition: all 0.4s;
+}
+
+.login button:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.email,
+.password {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  text-indent: 10px;
+  i {
+    font-size: 30px;
+    margin-right: 10px;
+  }
+}
+
+.login p {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  color: red;
+  font-weight: 600;
+  margin: 0;
 }
