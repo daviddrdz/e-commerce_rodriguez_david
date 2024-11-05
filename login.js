@@ -7,6 +7,8 @@ form.addEventListener("submit", (e) => {
   if (LOGIN_USER.email === form.elements.email.value && LOGIN_USER.password === form.elements.password.value) {
     localStorage.setItem("email", form.elements.email.value);
     localStorage.setItem("password", form.elements.password.value);
+    localStorage.setItem("cart", JSON.stringify([]));
+    localStorage.setItem("quantity", "0")
     location.href = "./index.html"
   } else {
     p.style.display = "flex";
