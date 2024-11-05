@@ -7,27 +7,6 @@ body {
   backdrop-filter: blur(5px);
 }
 
-.navbar-toggler {
-  background-color: rgba(255, 255, 255, 0.2);
-  &:hover {
-    box-shadow: none;
-  }
-}
-
-.nav-link {
-  color: white;
-  &:hover {
-    color: rgb(128, 166, 255);
-  }
-}
-
-#active {
-  color: rgba(255, 255, 255, 0.5);
-  &:hover {
-    color: white;
-  }
-}
-
 .navbar-brand {
   color: white;
   font-weight: 700;
@@ -40,89 +19,152 @@ body {
   }
 }
 
-@keyframes logo {
+/*@keyframes logo {
   50% {
     transform: scale(1.05);
   }
+}*/
+
+.nav-link {
+  color: white;
+  transition: all 0.5s;
+  &:visited {
+    color: white;
+  }
 }
 
-.divisor {
-  height: 3px;
-  background-color: white;
+.nav-link:hover,
+.nav-item span:hover {
+  color: rgb(255, 176, 39);
+}
+
+.nav-item {
+  display: flex;
+  gap: 20px;
+  font-weight: 500;
+  align-items: center;
+  color: white;
+}
+
+#logout {
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+#logout:hover {
+  color: rgb(177, 34, 34);
+}
+
+/* #active {
+  color: rgba(255, 255, 255, 0.5);
+  &:hover {
+    color: white;
+  }
+} */
+
+.navbar-toggler {
+  background-color: rgba(255, 255, 255, 0.2);
+  &:hover {
+    box-shadow: none;
+  }
 }
 
 main {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  height: 93.5vh;
+  height: 93.9dvh;
 }
 
 .detalles {
-  background-color: rgba(0, 0, 0, 0.4);
-  border: 3px solid white;
-  border-radius: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 0 50px;
   transition: all 0.5s ease-out;
-
-  h1 {
-    color: white;
-    font-size: 50px;
-    font-weight: 600;
-    margin-top: 50px;
-  }
-
-  h2 {
-    margin-bottom: 50px;
-    color: white;
-    font-size: 28px;
-    font-weight: 600;
-    margin-bottom: 50px;
-  }
 }
-
-.detalles:hover {
-  transform: scale(1.1);
+.detalles h1 {
+  margin: 0;
+  color: white;
+  font-size: 50px;
+  font-weight: 600;
+}
+.detalles h2 {
+  margin-top: 12px;
+  color: white;
+  font-size: 28px;
+  font-weight: 500;
 }
 
 .contenido {
   display: flex;
-  margin: 50px 0;
+  margin: 130px 0;
   gap: 100px;
-
-  img {
-    height: 200px;
-    width: 350px;
-    border-radius: 0.5rem;
-    transition: all 0.5s ease-in-out;
-  }
-
-  img:hover {
-    transform: scale(1.1);
-    box-shadow: 15px 25px 15px 0px rgba(0, 0, 0, 0.6);
-  }
+}
+.contenido img {
+  height: 300px;
+  width: 400px;
+  border-radius: 0.5rem;
+  transition: all 0.5s ease-in-out;
+}
+.contenido img:hover {
+  transform: scale(1.1);
+  box-shadow: 15px 25px 15px 0px rgba(0, 0, 0, 0.6);
 }
 
 .descripcion {
   display: flex;
   flex-direction: column;
+}
+.descripcion p,
+span {
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+}
+.descripcion p {
+  max-width: 500px;
+  margin: 30px 0;
+}
 
-  p,
-  span {
-    color: white;
-    font-size: 20px;
-    font-weight: 400;
-  }
+.input-group {
+  height: 40px;
+  margin: 0 0 12px 0;
+}
+.input-group input {
+  text-align: center;
+}
 
-  p {
-    width: 400px;
-  }
+.comprar,
+.login {
+  height: 50px;
+  outline: none;
+  border: 2px solid white;
+  color: white;
+  font-weight: bold;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 0.3s;
+  transform-origin: center;
+}
+.login {
+  margin: 30px 0;
+}
+.comprar:hover {
+  background-color: #28a742;
+  border-color: #28a742;
+  transform: scale(1.1);
+}
+.login:hover {
+  background-color: rgb(255, 176, 39);
+  border-color: rgb(255, 176, 39);
+  transform: scale(1.1);
+}
 
-  span {
-    margin-top: 40px;
-  }
+.botones {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin: 50px auto 0 auto;
 }
