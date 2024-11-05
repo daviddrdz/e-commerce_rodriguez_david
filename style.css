@@ -6,12 +6,7 @@ body {
   backdrop-filter: blur(5px);
 }
 
-.divisor {
-  height: 3px;
-  background-color: white;
-}
-
-.navbar-brand {
+/*.navbar-brand {
   color: white;
   font-weight: 700;
   animation-name: logo;
@@ -22,30 +17,51 @@ body {
     color: rgba(255, 255, 255, 0.7);
   }
 }
-
 @keyframes logo {
   50% {
     transform: scale(1.05);
   }
+}*/
+
+#menuLeft,
+#menuRight {
+  display: flex;
+  align-items: center;
+}
+
+#menuRight {
+  gap: 20px;
 }
 
 .nav-link {
   color: white;
+  transition: all 0.5s;
   &:visited {
     color: white;
   }
 }
 
-.nav-link:hover {
-  color: rgb(128, 166, 255);
+.nav-link:hover,
+.nav-item span:hover {
+  color: rgb(255, 176, 39);
 }
 
-#active {
+#logout {
+  cursor: pointer;
+  transition: all 0.5s;
+  color: white;
+}
+
+#logout:hover {
+  color: rgb(177, 34, 34);
+}
+
+/* #active {
   color: rgba(255, 255, 255, 0.5);
   &:hover {
     color: white;
   }
-}
+} */
 
 .navbar-toggler {
   background-color: rgba(255, 255, 255, 0.2);
@@ -68,23 +84,16 @@ h1 {
   font-weight: 600;
 }
 
-.productosdest {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 45px;
-  justify-items: center;
-  margin-bottom: 70px;
-}
-
 .contenedor {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-items: center;
+  margin: 0 100px;
   padding-bottom: 159px;
   gap: 45px;
   flex-wrap: wrap;
   justify-content: center;
-  justify-self: center;
 }
-
 .contenedor p {
   color: white;
   padding: 192px 0;
@@ -97,7 +106,7 @@ h1 {
   display: flex;
   flex-direction: column;
   width: 310px;
-  height: 400px;
+  height: 430px;
   align-items: center;
   justify-content: center;
   border-radius: 40px;
@@ -136,7 +145,7 @@ h1 {
   border-style: none;
   color: white;
   font-weight: 600;
-  background-color: rgb(128, 166, 255);
+  background-color: rgb(255, 176, 39);
   font-size: 15px;
   display: flex;
   align-items: center;
@@ -152,7 +161,7 @@ h1 {
   }
 
   &:hover {
-    background-color: rgb(71, 126, 255);
+    background-color: rgb(231, 150, 9);
   }
 }
 
@@ -167,16 +176,11 @@ h1 {
   margin-bottom: 20px;
 }
 
-.buttonresp {
-  display: none;
-  height: 40px;
-  width: 170px;
-  border-radius: 25px;
-  border-style: none;
-  color: white;
-  font-weight: 600;
-  background-color: rgb(128, 166, 255);
-  font-size: 15px;
+.details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
 }
 
 a {
@@ -215,6 +219,11 @@ img {
   border: none;
   outline: none;
   background: none;
+  transition: all 0.5s;
+}
+
+.categories button:hover {
+  color: rgb(255, 176, 39);
 }
 
 .search {
@@ -233,6 +242,16 @@ img {
   font-size: 30px;
   align-items: center;
   justify-content: center;
+  transition: all 0.5s;
+}
+
+.search input {
+  transition: all 0.5s;
+}
+
+.search input:hover,
+.search button:hover {
+  transform: scale(1.03);
 }
 
 input {
