@@ -14,6 +14,10 @@ function fillCards(filter) {
             <div class="cajaprecio">
                 <span class="precio">$${item.price}</span>
             </div>
+            <div class="details">
+                <span><b>Category:</b> ${item.category}</span>
+                <span><b>Stock:</b> ${item.stock}</span>
+            </div>
             <div class="carrito">
                 <button><a href=./producto.html?prod=${item.id}><i class='bx bx-info-circle'></i>Ver más</a></button>
             </div>
@@ -28,8 +32,7 @@ const filterList = () => {
     let filtered = data.filter((item) => item.title === input.value);
     if (filtered.length > 0) {
         fillCards(filtered)
-    }
-    else {
+    } else {
         section.innerHTML = `<p>No se ha encontrado el producto, intentalo de nuevo.</p>`
     }
 }
