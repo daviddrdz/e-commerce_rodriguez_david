@@ -3,17 +3,20 @@ let menu = [];
 for (let i of categories) {
   menu.push(`
     <li class="nav-item">
-      <a class="nav-link" aria-current="page" href="${i.href}">
+      <a class="nav-link" id="${i.id}"aria-current="page" href="${i.href}">
       <i class='${i.icon}'></i>
       ${i.name}</a>
     </li>
     `)
 };
 
-let navbarLeft = document.getElementById("menuLeft").innerHTML = menu[0]
-let navbarCenter = document.getElementById("menuCenter").innerHTML = menu.slice(1, 4).join("");
-if (localStorage.email && localStorage.password) {
-  let navbarRight = document.getElementById("menuRight").innerHTML = menu[5];
-} else {
-  let navbarRight = document.getElementById("menuRight").innerHTML = menu[4];
+document.getElementById("menuLeft").innerHTML = menu.slice(1, 3).join("");
+localStorage.getItem("email")
+  ? document.getElementById("menuRight").innerHTML = `
+  ${menu[4]}${menu[5]}<span onclick="logout()" id="logout">Cerrar Sesión</span>`
+  : document.getElementById("menuRight").innerHTML = menu[3];
+
+function logout() {
+  localStorage.clear();
+  location.href = "./index.html";
 }
