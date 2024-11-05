@@ -5,7 +5,7 @@ const data = [
     detail:
       "Cámara mirrorless profesional con sensor de 45 megapíxeles, perfecta para fotografía y video en alta resolución.",
     price: 3999.99,
-    stock: 1,
+    stock: 4,
     img: "http://dummyimage.com/164x100.png/cc0000/ffffff",
     category: "Digital",
   },
@@ -25,7 +25,7 @@ const data = [
     detail:
       "Cámara full-frame de 50.1 MP, con capacidades avanzadas de video 8K y ráfagas de hasta 30 fps.",
     price: 6499.99,
-    stock: 1,
+    stock: 2,
     img: "http://dummyimage.com/155x100.png/5fa2dd/ffffff",
     category: "Digital",
   },
@@ -35,7 +35,7 @@ const data = [
     detail:
       "Una cámara de telémetro con sensor full-frame de 40 MP, combinando tecnología moderna con diseño clásico.",
     price: 8299.99,
-    stock: 10,
+    stock: 8,
     img: "http://dummyimage.com/199x100.png/ff4444/ffffff",
     category: "Digital",
   },
@@ -65,7 +65,7 @@ const data = [
     detail:
       "Una icónica cámara de formato medio para película, utilizada por profesionales para obtener imágenes de calidad excepcional.",
     price: 4000.00,
-    stock: 1,
+    stock: 5,
     img: "http://dummyimage.com/229x100.png/dddddd/000000",
     category: "Film",
   },
@@ -106,35 +106,41 @@ const categories = [
     name: "Nosotros",
     href: "#",
     icon: "bx bx-buildings",
+    id: "",
   },
   {
     name: "Home",
     href: "./index.html",
     icon: "bx bx-home-alt-2",
+    id: "",
   },
   {
     name: "Productos",
     href: "#",
     icon: "bx bx-store-alt",
-  },
-  {
-    name: "Carrito",
-    href: "#",
-    icon: "bx bx-cart",
+    id: "",
   },
   {
     name: "Login",
     href: "./login.html",
     icon: "bx bxs-user",
+    id: "",
   },
   {
-    name: "Usuario",
+    name: `${localStorage.getItem("email")}`,
     href: "#",
     icon: "bx bxs-user",
-  }
+    id: "",
+  },
+  {
+    name: `${localStorage.getItem("quantity")}`,
+    href: "#",
+    icon: "bx bx-cart",
+    id: "cart",
+  },
 ];
 
 const LOGIN_USER = {
-  email: "test@gmail.com",
+  email: "admin@example.com",
   password: "123",
 }
