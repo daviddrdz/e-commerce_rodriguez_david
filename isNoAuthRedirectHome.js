@@ -3,3 +3,5 @@ let isNoAuthRedirectHome = () => {
     location.href = "./index.html";
   }
 }
+
+isNoAuthRedirectHome();
