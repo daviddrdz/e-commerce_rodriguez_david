@@ -9,7 +9,7 @@ const categoryButtons = document.querySelectorAll(".categoryButton");
 function fillCards(filter) {
     let cards = filter.map((item) => `
         <div class="carta">
-            <img src="${item.img}" height="200px">
+            <img src="${item.img}">
             <h3>${item.title}</h3>
             <div class="cajaprecio">
                 <span class="precio">$${item.price}</span>
