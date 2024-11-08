@@ -1,24 +1,22 @@
 const main = document.querySelector("main");
-
-let idProducto = window.location.search.split("=")[1];
-
-let producto = data.find((product) => product.id == idProducto);
+let idProduct = window.location.search.split("=")[1];
+let product = data.find((item) => item.id == idProduct);
 
 main.innerHTML = `
 <div class="detalles">
   <div div class="contenido" >
-    <img src="${producto.img}" height="200px">
+    <img src="${product.img}">
       <div class="descripcion">
-        <h1>${producto.title}</h1>
-        <h2>$${producto.price} USD</h2>
-        <p>${producto.detail}</p>
-        <span><b>Stock:</b> ${producto.stock}</span>
-        <span><b>Categoria:</b> ${producto.category}</span>
+        <h1>${product.title}</h1>
+        <h2>$${product.price} USD</h2>
+        <p>${product.detail}</p>
+        <span><b>Stock:</b> ${product.stock}</span>
+        <span><b>Categoria:</b> ${product.category}</span>
         <div class="botones">
           ${localStorage.getItem("email") ? `
           <div class="input-group">
             <button class="btn btn-dark" type="button" onclick="decreaseItem()">-</button>
-            <input type="number" class="form-control" value="1" id="counter" />
+            <input type="number" class="form-control text-center" value="1" id="counter" />
             <button class="btn btn-dark" type="button" onclick="increaseItem()">+</button>
           </div>
           <button class="comprar" onclick="addItems()">Comprar</button>` : `
@@ -38,17 +36,29 @@ function decreaseItem() {
 }
 
 function increaseItem() {
-  if (counter.value < producto.stock) {
+  if (counter.value < product.stock) {
     counter.value = Number(counter.value) + 1;
   }
 }
 
 function addItems() {
   let cart = JSON.parse(localStorage.getItem("cart"));
-  cart.push({ id: idProducto, quantity: Number(counter.value) });
-  localStorage.setItem("cart", JSON.stringify(cart))
+  let existeEnCart = cart.some((item) => item.product.id === Number(idProduct));
 
+  if (existeEnCart) {
+    cart = cart.map(item => {
+      if (item.product.id === Number(idProduct)) {
+        return { ...item, quantity: item.quantity + Number(counter.value) }
+      } else {
+        return item;
+      }
+    })
+  } else {
+    cart.push({ product: product, quantity: Number(counter.value) })
+  }
+
+  localStorage.setItem("cart", JSON.stringify(cart))
   let quantity = cart.reduce((acumulado, actual) => acumulado + actual.quantity, 0);
   localStorage.setItem("quantity", quantity);
-  document.querySelector("#cart").innerHTML = `<i class='bx bx-cart'></i>${quantity}`
+  document.querySelector("#cart").innerHTML = `<i class='bx bx-cart'></i> ${quantity}`
 }
