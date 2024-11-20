@@ -6,7 +6,7 @@ const data = [
       "Cámara mirrorless profesional con sensor de 45 megapíxeles, perfecta para fotografía y video en alta resolución.",
     price: 3999.99,
     stock: 4,
-    img: "./images/EOSr50.png",
+    img: "../img/EOSr50.png",
     category: "Digital",
   },
   {
@@ -16,7 +16,7 @@ const data = [
       "La cámara insignia sin espejo de Nikon, ideal para profesionales que buscan velocidad y calidad de imagen excepcional.",
     price: 5499.99,
     stock: 6,
-    img: "./images/NikonZ9.png",
+    img: "../img/NikonZ9.png",
     category: "Digital",
   },
   {
@@ -26,7 +26,7 @@ const data = [
       "Cámara full-frame de 50.1 MP, con capacidades avanzadas de video 8K y ráfagas de hasta 30 fps.",
     price: 6499.99,
     stock: 2,
-    img: "./images/SonyA1.png",
+    img: "../img/SonyA1.png",
     category: "Digital",
   },
   {
@@ -36,7 +36,7 @@ const data = [
       "Una cámara de telémetro con sensor full-frame de 40 MP, combinando tecnología moderna con diseño clásico.",
     price: 8299.99,
     stock: 8,
-    img: "./images/LeicaM10R.png",
+    img: "../img/LeicaM10R.png",
     category: "Digital",
   },
   {
@@ -46,7 +46,7 @@ const data = [
       "Cámara de formato medio para película, conocida por su calidad de imagen y robustez. Ideal para fotografía analógica profesional.",
     price: 2500.99,
     stock: 3,
-    img: "./images/Pentax67.png",
+    img: "../img/Pentax67.png",
     category: "Film",
   },
   {
@@ -56,7 +56,7 @@ const data = [
       "Cámara de formato medio digital, con un sensor de 102 MP, ideal para imágenes de alta resolución y paisajes.",
     price: 5999.99,
     stock: 2,
-    img: "./images/FujifilmGFX100S.png",
+    img: "../img/FujifilmGFX100S.png",
     category: "Digital",
   },
   {
@@ -66,7 +66,7 @@ const data = [
       "Una icónica cámara de formato medio para película, utilizada por profesionales para obtener imágenes de calidad excepcional.",
     price: 4000.00,
     stock: 5,
-    img: "./images/Hasselblad500CM.png",
+    img: "../img/Hasselblad500CM.png",
     category: "Film",
   },
   {
@@ -76,7 +76,7 @@ const data = [
       "Cámara mirrorless Micro 4/3, compacta y ligera, perfecta para fotógrafos en movimiento.",
     price: 1799.99,
     stock: 4,
-    img: "./images/OlympusM3.png",
+    img: "../img/OlympusM3.png",
     category: "Digital",
   },
   {
@@ -86,7 +86,7 @@ const data = [
       "Una cámara de formato medio para película, preferida por fotógrafos de moda y retratos por su calidad de imagen y versatilidad.",
     price: 3500.00,
     stock: 7,
-    img: "./images/MamiyaRZ67Pro2.png",
+    img: "../img/MamiyaRZ67Pro2.png",
     category: "Film",
   },
   {
@@ -96,7 +96,7 @@ const data = [
       "Cámara híbrida de video y foto full-frame, diseñada para cineastas que buscan grabación en 6K con calidad profesional.",
     price: 3999.99,
     stock: 6,
-    img: "./images/LumixS1H.png",
+    img: "../img/LumixS1H.png",
     category: "Digital",
   },
 ];
@@ -110,7 +110,7 @@ const categories = [
   },
   {
     name: "Home",
-    href: "./index.html",
+    href: "../index.html",
     icon: "bx bx-home-alt-2",
     id: "",
   },
@@ -122,7 +122,7 @@ const categories = [
   },
   {
     name: "Login",
-    href: "./login.html",
+    href: "../html/login.html",
     icon: "bx bxs-user",
     id: "",
   },
@@ -134,7 +134,7 @@ const categories = [
   },
   {
     name: `${localStorage.getItem("quantity")}`,
-    href: "./carrito.html",
+    href: "../html/carrito.html",
     icon: "bx bx-cart",
     id: "cart",
   },

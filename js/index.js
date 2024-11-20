@@ -19,17 +19,25 @@ function fillCards(filter) {
                 <span><b>Stock:</b> ${item.stock}</span>
             </div>
             <div class="carrito">
-                <button><a href=./producto.html?prod=${item.id}><i class='bx bx-info-circle'></i>Ver más</a></button>
+                <button><a href=./html/producto.html?prod=${item.id}><i class='bx bx-info-circle'></i>Ver más</a></button>
             </div>
         </div>
     `)
     section.innerHTML = cards.join("");
 }
 
-fillCards(data);
+const loader = new Promise((resolve, reject) => {
+    resolve("hola");
+})
+
+loader.then(() => {
+    setTimeout(() => {
+        fillCards(data);
+    }, 3000)
+})
 
 const filterList = () => {
-    let filtered = data.filter((item) => item.title === input.value);
+    let filtered = data.filter((item) => item.title.toLowerCase().includes(input.value.toLowerCase()));
     if (filtered.length > 0) {
         fillCards(filtered)
     } else {
@@ -42,8 +50,13 @@ const filterCategory = (category) => {
     fillCards(itemCategory);
 }
 
+const resetCards = () => {
+    fillCards(data);
+    input.value = "";
+}
+
 buttonFilter.addEventListener("click", filterList);
-buttonReset.addEventListener("click", () => fillCards(data));
+buttonReset.addEventListener("click", () => resetCards());
 buttonAll.addEventListener("click", () => fillCards(data));
 for (let i in categoryButtons) {
     categoryButtons[i].addEventListener("click", (event) => {

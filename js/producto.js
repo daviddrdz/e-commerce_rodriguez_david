@@ -20,7 +20,7 @@ main.innerHTML = `
             <button class="btn btn-dark" type="button" onclick="increaseItem()">+</button>
           </div>
           <button class="comprar" onclick="addItems()">Comprar</button>` : `
-          <button class="login" onclick="location.href='./login.html'">Iniciar sesión para comprar</button>
+          <button class="login" onclick="location.href='../html/login.html'">Iniciar sesión para comprar</button>
           `}
         </div>
       </div>
@@ -57,8 +57,18 @@ function addItems() {
     cart.push({ product: product, quantity: Number(counter.value) })
   }
 
+  Toastify({
+    text: "Agregado al carrito correctamente",
+    duration: 3000,
+    close: true,
+    style: {
+      background: "#28a742",
+    }
+  }).showToast();
+
   localStorage.setItem("cart", JSON.stringify(cart))
   let quantity = cart.reduce((acumulado, actual) => acumulado + actual.quantity, 0);
   localStorage.setItem("quantity", quantity);
   document.querySelector("#cart").innerHTML = `<i class='bx bx-cart'></i> ${quantity}`
+  counter.value = 1;
 }

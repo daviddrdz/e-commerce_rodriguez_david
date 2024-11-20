@@ -9,7 +9,7 @@ form.addEventListener("submit", (e) => {
     localStorage.setItem("password", form.elements.password.value);
     localStorage.setItem("cart", JSON.stringify([]));
     localStorage.setItem("quantity", "0")
-    location.href = "./index.html"
+    location.href = "../index.html"
   } else {
     p.style.display = "flex";
     form.elements.email.value = "";

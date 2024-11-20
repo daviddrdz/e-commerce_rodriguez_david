@@ -74,12 +74,23 @@ function removeCards(id) {
 }
 
 function clearCart() {
-  pError.style.display = "block";
-  document.querySelector("#cart").innerHTML = `<i class='bx bx-cart'></i> 0`
-  localStorage.setItem("cart", JSON.stringify([]));
-  localStorage.setItem("quantity", "0");
-  getCards([]);
-  total(0);
+  Swal.fire({
+    title: "Alerta",
+    text: "¿Seguro que quieres vaciar el carrito?",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonText: "Si, obvio",
+    cancelButtonText: "No"
+  }).then((result) => {
+    if (result.isConfirmed) {
+      pError.style.display = "block";
+      document.querySelector("#cart").innerHTML = `<i class='bx bx-cart'></i> 0`
+      localStorage.setItem("cart", JSON.stringify([]));
+      localStorage.setItem("quantity", "0");
+      getCards([]);
+      total(0);
+    }
+  })
 }
 
 getCards(JSON.parse(localStorage.getItem("cart")));

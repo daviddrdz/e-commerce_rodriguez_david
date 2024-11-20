@@ -18,5 +18,5 @@ localStorage.getItem("email")
 
 function logout() {
   localStorage.clear();
-  location.href = "./index.html";
+  location.href = "../index.html";
 }
